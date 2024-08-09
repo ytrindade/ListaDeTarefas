@@ -1,8 +1,9 @@
 ﻿using ListaDeTarefas.Exceptions;
+using ListaDeTarefas.Interfaces;
 
 namespace ListaDeTarefas.Entities
 {
-    internal class TaskValidator
+    internal class TaskValidator : ITaskValidator
     {
         private readonly List<Task> _tasks;
 

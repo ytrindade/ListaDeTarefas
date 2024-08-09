@@ -1,5 +1,6 @@
 ﻿using ListaDeTarefas.Entities;
 using ListaDeTarefas.Exceptions;
+using ListaDeTarefas.Interfaces;
 
 namespace ListaDeTarefas.Screens
 {
@@ -7,9 +8,9 @@ namespace ListaDeTarefas.Screens
     {
 
         private TaskManager _taskManager;
-        private readonly TaskValidator _taskValidator;
+        private readonly ITaskValidator _taskValidator;
 
-        public UserScreen(TaskManager taskManager, TaskValidator taskValidator)
+        public UserScreen(TaskManager taskManager, ITaskValidator taskValidator)
         {
             _taskManager = taskManager;
             _taskValidator = taskValidator;
